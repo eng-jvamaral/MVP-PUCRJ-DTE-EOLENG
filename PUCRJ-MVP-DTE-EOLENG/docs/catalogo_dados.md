@@ -1,8 +1,8 @@
 # Catálogo de Dados
 
-Camada analítica (Gold) em esquema estrela, construída a partir do dataset **Kelmarsh Wind Farm** (Zenodo, DOI 10.5281/zenodo.5841834, licença CC-BY-4.0 — Cubico Sustainable Investments).
+Camada analítica (Gold) em esquema estrela, construída a partir do dataset **Kelmarsh Wind Farm** (Zenodo, DOI 10.5281/zenodo.5841834, licença CC-BY-4.0 Cubico Sustainable Investments).
 
-Os tipos indicados são os **de destino no Gold** — na camada Bronze todas as colunas estão como texto (`string`) e são convertidas na Silver. A coluna *origem* aponta o nome na camada anterior. Os exemplos do fato vêm da leitura real de `2018-11-16 09:20:00` (turbina 1); os das dimensões, da turbina 1.
+Os tipos indicados são os **de destino no Gold**, na camada Bronze todas as colunas estão como texto (`string`) e são convertidas na Silver. A coluna *origem* aponta o nome na camada anterior. Os exemplos do fato vêm da leitura real de `2018-11-16 09:20:00` (turbina 1); os das dimensões, da turbina 1.
 
 > **Nota sobre fuso:** os timestamps estão em **UTC** (`+00:00`), não em horário local do Reino Unido. Considerar na análise de padrões por hora do dia.
 

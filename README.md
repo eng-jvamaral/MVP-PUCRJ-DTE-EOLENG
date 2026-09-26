@@ -97,17 +97,9 @@ MVP-PUCRJ-DTE-EOLENG/
     └── diagrama_er_final.pdf     ← diagrama do esquema estrela
 ```
 
-## Como reproduzir
-
-1. Crie uma conta no [Databricks Free Edition](https://www.databricks.com/learn/free-edition).
-2. Em **Catalog → workspace → default**, crie o Volume `kelmarsh_raw` com os diretórios `scada_2018/` e `ref/`.
-3. Faça o upload dos CSVs de 2018 (12 arquivos) em `scada_2018/` e dos 2 arquivos de referência em `ref/`.
-4. Importe os notebooks e execute-os em ordem: `01_bronze` → `02_silver` → `03_gold` → `04_qualidade` → `05_analises`.
-
-Todas as gravações usam o modo `overwrite`, então os notebooks podem ser reexecutados sem duplicar registros.
-
----
-
 ## Referência dos dados
 
 PLUMLEY, C. **Kelmarsh wind farm data**. [S. l.]: Zenodo, 2022. DOI: 10.5281/zenodo.5841834.
+
+## Meu LinkedIn
+[https://www.linkedin.com/in/joaovictoramaral/]

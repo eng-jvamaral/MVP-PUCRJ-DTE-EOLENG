@@ -5,7 +5,7 @@
 Pós-Graduação em Ciência de Dados e Analytics — PUC-Rio · Sprint de Engenharia de Dados
 Aluno: João Victor Amaral dos Santos · Matrícula: 4052025002072
 
-**Relatório completo:** [`Relatorio_MVP_Engenharia_de_Dados.pdf`](Relatorio_MVP_Engenharia_de_Dados.pdf)
+**Relatório completo:** [`Relatorio_MVP_Engenharia_de_Dados_Joao_Victor_Amaral_4052025002072.pdf`](Relatorio_MVP_Engenharia_de_Dados_Joao_Victor_Amaral_4052025002072.pdf)
 
 O relatório em PDF é o documento de entrega e contém todos os tópicos exigidos (contexto e perguntas, carga, modelagem e catálogo, pipeline, qualidade, análise e autoavaliação), com as evidências de execução no Databricks. Este README resume o projeto e orienta a navegação no repositório.
 

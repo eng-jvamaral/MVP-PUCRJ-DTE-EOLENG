@@ -65,35 +65,48 @@ Zenodo ──► Volume kelmarsh_raw ──► Bronze ──► Silver ──►
 - `gold_dim_status`: 0 = Normal, 1 = Stop (obtido por *range join* com o log de eventos)
 - `gold_fato_scada_curado`: versão curada do fato, usada nas análises
 
-O diagrama ER está em [`docs/diagrama_er.png`](docs/diagrama_er.png) e o catálogo de dados em [`docs/catalogo.md`](docs/catalogo.md).
+O diagrama ER está em [`docs/diagrama_er_final.pdf`](docs/diagrama_er_final.pdf) e o catálogo de dados em [`docs/catalogo.md`](docs/catalogo.md).
+
+---
+
+## Notebooks
+
+Os notebooks estão em [`notebooks/`](notebooks/). As versões em HTML preservam as saídas de execução no Databricks e podem ser visualizadas diretamente no navegador:
+
+| Notebook | Etapa | Código | Visualizar com saídas |
+|---|---|---|---|
+| 01 – Bronze | Ingestão dos CSVs em Delta | [ipynb](notebooks/01_bronze.ipynb) | [abrir](https://eng-jvamaral.github.io/MVP-PUCRJ-DTE-EOLENG/notebooks/html/01_bronze.html) |
+| 02 – Silver | Tipagem, limpeza e padronização | [ipynb](notebooks/02_silver.ipynb) | [abrir](https://eng-jvamaral.github.io/MVP-PUCRJ-DTE-EOLENG/notebooks/html/02_silver.html) |
+| 03 – Gold | Esquema estrela e reconciliação | [ipynb](notebooks/03_gold.ipynb) | [abrir](https://eng-jvamaral.github.io/MVP-PUCRJ-DTE-EOLENG/notebooks/html/03_gold.html) |
+| 04 – Qualidade | Auditoria e curadoria | [ipynb](notebooks/04_qualidade.ipynb) | [abrir](https://eng-jvamaral.github.io/MVP-PUCRJ-DTE-EOLENG/notebooks/html/04_qualidade.html) |
+| 05 – Análises | Respostas às perguntas (SQL) | [ipynb](notebooks/05_analises.ipynb) | [abrir](https://eng-jvamaral.github.io/MVP-PUCRJ-DTE-EOLENG/notebooks/html/05_analises.html) |
 
 ---
 
 ## Estrutura do repositório
 
 ```
-PUCRJ-MVP-DTE-EOLENG/
+MVP-PUCRJ-DTE-EOLENG/
 ├── README.md
-├── Relatorio_MVP_Engenharia_de_Dados.pdf   ← documento de entrega
+├── Relatorio_MVP_Engenharia_de_Dados_Joao_Victor_Amaral_4052025002072.pdf   ← documento de entrega
 ├── notebooks/
-│   ├── 01_bronze.ipynb                     ← ingestão dos CSVs em Delta
-│   ├── 02_silver.ipynb                     ← tipagem, limpeza, padronização
-│   ├── 03_gold.ipynb                       ← esquema estrela + reconciliação
-│   ├── 04_qualidade.ipynb                  ← auditoria e curadoria
-│   ├── 05_analises.ipynb                   ← respostas às perguntas (SQL)
-│   └── html/                               ← mesmos notebooks com as saídas de execução
-│       ├── 01_bronze.html
-│       ├── 02_silver.html
-│       ├── 03_gold.html
-│       ├── 04_qualidade.html
-│       └── 05_analises.html
+│   ├── 01_bronze.ipynb … 05_analises.ipynb
+│   └── html/                     ← mesmos notebooks com as saídas de execução
 └── docs/
-    ├── catalogo.md                         ← catálogo de dados da camada Gold
-    ├── diagrama_er.png                     ← esquema estrela
-    └── Kelmarsh_WT_static.csv              ← cadastro das turbinas (referência, 1 KB)
+    ├── catalogo.md               ← catálogo de dados da camada Gold
+    └── diagrama_er_final.pdf     ← diagrama do esquema estrela
 ```
 
+## Como reproduzir
 
+1. Crie uma conta no [Databricks Free Edition](https://www.databricks.com/learn/free-edition).
+2. Em **Catalog → workspace → default**, crie o Volume `kelmarsh_raw` com os diretórios `scada_2018/` e `ref/`.
+3. Faça o upload dos CSVs de 2018 (12 arquivos) em `scada_2018/` e dos 2 arquivos de referência em `ref/`.
+4. Importe os notebooks e execute-os em ordem: `01_bronze` → `02_silver` → `03_gold` → `04_qualidade` → `05_analises`.
+
+Todas as gravações usam o modo `overwrite`, então os notebooks podem ser reexecutados sem duplicar registros.
+
+---
 
 ## Referência dos dados
 

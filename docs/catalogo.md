@@ -14,7 +14,7 @@ Grão: uma linha por **turbina × instante de 10 minutos**.
 |---|---|---|---|---|---|
 | turbina_id | int | identificador da turbina (FK) | — | silver_scada.turbina_id | 1 |
 | tempo_id | timestamp | instante da leitura (FK) | — | silver_scada.tempo | 2018-11-16 09:20:00 |
-| status_id | int | status operacional vigente (FK, definido na reconciliação da S5) | — | reconciliação silver_scada × silver_status | — |
+| status_id | int | status operacional vigente (FK, definido na reconciliação, Seção 4.2 do relatório) | — | reconciliação silver_scada × silver_status | — |
 | wind_speed_m_s | double | velocidade média do vento | m/s | silver_scada.wind_speed_m_s | 3.01 |
 | wind_speed_std_m_s | double | desvio-padrão do vento no intervalo | m/s | silver_scada.wind_speed_std_m_s | 0.41 |
 | wind_speed_min_m_s | double | vento mínimo no intervalo | m/s | silver_scada.wind_speed_min_m_s | 2.00 |

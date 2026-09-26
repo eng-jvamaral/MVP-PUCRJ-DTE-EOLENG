@@ -102,4 +102,4 @@ MVP-PUCRJ-DTE-EOLENG/
 PLUMLEY, C. **Kelmarsh wind farm data**. [S. l.]: Zenodo, 2022. DOI: 10.5281/zenodo.5841834.
 
 ## Meu LinkedIn
-[https://www.linkedin.com/in/joaovictoramaral/]
+[https://www.linkedin.com/in/joaovictoramaral/](https://www.linkedin.com/in/joaovictoramaral/)
